@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Archetype Created Web Application</display-name>
+
+
+<welcome-file-list>
+        <welcome-file>Login</welcome-file>
+    </welcome-file-list>
+
+	<servlet>
+		<servlet-name>AccountCreation</servlet-name>
+		<servlet-class>AccountCreation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccountCreation</servlet-name>
+		<url-pattern>/AccountCreation</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ValidateLogin</servlet-name>
+		<servlet-class>ValidateLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Login</display-name>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>Login</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>CreateAccount</display-name>
+		<servlet-name>CreateAccount</servlet-name>
+		<servlet-class>CreateAccount</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ErrorLogin</display-name>
+		<servlet-name>ErrorLogin</servlet-name>
+		<servlet-class>ErrorLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ErrorCreating</display-name>
+		<servlet-name>ErrorCreating</servlet-name>
+		<servlet-class>ErrorCreating</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Hub</display-name>
+		<servlet-name>Hub</servlet-name>
+		<servlet-class>Hub</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Logout</display-name>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>Logout</servlet-class>
+	</servlet>
+<servlet>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>com.jwt.rest</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ValidateLogin</servlet-name>
+		<url-pattern>/ValidateLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateAccount</servlet-name>
+		<url-pattern>/CreateAccount</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ErrorLogin</servlet-name>
+		<url-pattern>/ErrorLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ErrorCreating</servlet-name>
+		<url-pattern>/ErrorCreating</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Hub</servlet-name>
+		<url-pattern>/Hub</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>Jersey REST Service</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+
+
+
+</web-app>

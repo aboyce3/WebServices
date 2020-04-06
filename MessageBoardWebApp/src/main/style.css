@@ -1,0 +1,13 @@
+#wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+body {
+	background: #00F260;
+	background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #0575E6, #00F260);
+}
