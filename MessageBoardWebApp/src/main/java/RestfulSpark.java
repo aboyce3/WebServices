@@ -18,9 +18,9 @@ public class RestfulSpark {
 		return messages.toJSON();
 			});
 		get("/Hub", (request, response) -> {
-	    String s = request.session().attribute("username");
+	        String s = request.session().attribute("username");
 		response.type("text/html");
-	    Messages messages = new Messages();
+	        Messages messages = new Messages();
 	    		if(request.session().attribute("username") == null) response.redirect("/Login");
 	    if(request.queryParams("textEntry") != null) {
 	    LocalDateTime myDateObj = LocalDateTime.now();
